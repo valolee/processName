@@ -13,18 +13,15 @@
 		3E659F201B4669770046DD15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E659F1E1B4669770046DD15 /* Main.storyboard */; };
 		3E659F221B4669770046DD15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E659F211B4669770046DD15 /* Images.xcassets */; };
 		3E659F251B4669770046DD15 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E659F231B4669770046DD15 /* LaunchScreen.xib */; };
-		3E659F311B4669770046DD15 /* findProcessNameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E659F301B4669770046DD15 /* findProcessNameTests.m */; };
+		3E659F3F1B4669E30046DD15 /* VOProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E659F3C1B4669E30046DD15 /* VOProcess.m */; };
+		3E659F401B4669E30046DD15 /* VOProcessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E659F3E1B4669E30046DD15 /* VOProcessHelper.m */; };
+		3E659F431B466E5D0046DD15 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E659F421B466E5D0046DD15 /* UIView+Border.m */; };
+		3E94920D1C76FE0B00895C39 /* ELLIOKitDumper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9492081C76FE0B00895C39 /* ELLIOKitDumper.m */; };
+		3E94920E1C76FE0B00895C39 /* ELLIOKitNodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E94920A1C76FE0B00895C39 /* ELLIOKitNodeInfo.m */; };
+		3E94920F1C76FE0B00895C39 /* VOIOKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E94920C1C76FE0B00895C39 /* VOIOKitUtils.m */; };
+		3E9492121C76FE9800895C39 /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9492111C76FE9800895C39 /* DeviceUtil.m */; };
+		3E9492141C76FF4000895C39 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9492131C76FF4000895C39 /* IOKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3E659F2B1B4669770046DD15 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E659F091B4669770046DD15 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3E659F101B4669770046DD15;
-			remoteInfo = findProcessName;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3E659F111B4669770046DD15 /* findProcessName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findProcessName.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,9 +34,23 @@
 		3E659F1F1B4669770046DD15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E659F211B4669770046DD15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E659F241B4669770046DD15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3E659F2A1B4669770046DD15 /* findProcessNameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findProcessNameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E659F2F1B4669770046DD15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E659F301B4669770046DD15 /* findProcessNameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = findProcessNameTests.m; sourceTree = "<group>"; };
+		3E659F3B1B4669E30046DD15 /* VOProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOProcess.h; sourceTree = "<group>"; };
+		3E659F3C1B4669E30046DD15 /* VOProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOProcess.m; sourceTree = "<group>"; };
+		3E659F3D1B4669E30046DD15 /* VOProcessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOProcessHelper.h; sourceTree = "<group>"; };
+		3E659F3E1B4669E30046DD15 /* VOProcessHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOProcessHelper.m; sourceTree = "<group>"; };
+		3E659F411B466E5D0046DD15 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
+		3E659F421B466E5D0046DD15 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		3E9492071C76FE0B00895C39 /* ELLIOKitDumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELLIOKitDumper.h; sourceTree = "<group>"; };
+		3E9492081C76FE0B00895C39 /* ELLIOKitDumper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELLIOKitDumper.m; sourceTree = "<group>"; };
+		3E9492091C76FE0B00895C39 /* ELLIOKitNodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELLIOKitNodeInfo.h; sourceTree = "<group>"; };
+		3E94920A1C76FE0B00895C39 /* ELLIOKitNodeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELLIOKitNodeInfo.m; sourceTree = "<group>"; };
+		3E94920B1C76FE0B00895C39 /* VOIOKitUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOIOKitUtils.h; sourceTree = "<group>"; };
+		3E94920C1C76FE0B00895C39 /* VOIOKitUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOIOKitUtils.m; sourceTree = "<group>"; };
+		3E9492101C76FE9800895C39 /* DeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtil.h; sourceTree = "<group>"; };
+		3E9492111C76FE9800895C39 /* DeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtil.m; sourceTree = "<group>"; };
+		3E9492131C76FF4000895C39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E659F271B4669770046DD15 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3E9492141C76FF4000895C39 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				3E659F111B4669770046DD15 /* findProcessName.app */,
-				3E659F2A1B4669770046DD15 /* findProcessNameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +85,8 @@
 		3E659F131B4669770046DD15 /* findProcessName */ = {
 			isa = PBXGroup;
 			children = (
+				3E9492061C76FE0B00895C39 /* ELLIOKit */,
+				3E659F3A1B4669E30046DD15 /* Classes */,
 				3E659F181B4669770046DD15 /* AppDelegate.h */,
 				3E659F191B4669770046DD15 /* AppDelegate.m */,
 				3E659F1B1B4669770046DD15 /* ViewController.h */,
@@ -96,6 +102,7 @@
 		3E659F141B4669770046DD15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E9492131C76FF4000895C39 /* IOKit.framework */,
 				3E659F151B4669770046DD15 /* Info.plist */,
 				3E659F161B4669770046DD15 /* main.m */,
 			);
@@ -119,6 +126,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3E659F3A1B4669E30046DD15 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3E659F411B466E5D0046DD15 /* UIView+Border.h */,
+				3E659F421B466E5D0046DD15 /* UIView+Border.m */,
+				3E659F3B1B4669E30046DD15 /* VOProcess.h */,
+				3E659F3C1B4669E30046DD15 /* VOProcess.m */,
+				3E659F3D1B4669E30046DD15 /* VOProcessHelper.h */,
+				3E659F3E1B4669E30046DD15 /* VOProcessHelper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3E9492061C76FE0B00895C39 /* ELLIOKit */ = {
+			isa = PBXGroup;
+			children = (
+				3E9492101C76FE9800895C39 /* DeviceUtil.h */,
+				3E9492111C76FE9800895C39 /* DeviceUtil.m */,
+				3E9492071C76FE0B00895C39 /* ELLIOKitDumper.h */,
+				3E9492081C76FE0B00895C39 /* ELLIOKitDumper.m */,
+				3E9492091C76FE0B00895C39 /* ELLIOKitNodeInfo.h */,
+				3E94920A1C76FE0B00895C39 /* ELLIOKitNodeInfo.m */,
+				3E94920B1C76FE0B00895C39 /* VOIOKitUtils.h */,
+				3E94920C1C76FE0B00895C39 /* VOIOKitUtils.m */,
+			);
+			path = ELLIOKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,39 +174,17 @@
 			productReference = 3E659F111B4669770046DD15 /* findProcessName.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3E659F291B4669770046DD15 /* findProcessNameTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E659F371B4669770046DD15 /* Build configuration list for PBXNativeTarget "findProcessNameTests" */;
-			buildPhases = (
-				3E659F261B4669770046DD15 /* Sources */,
-				3E659F271B4669770046DD15 /* Frameworks */,
-				3E659F281B4669770046DD15 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3E659F2C1B4669770046DD15 /* PBXTargetDependency */,
-			);
-			name = findProcessNameTests;
-			productName = findProcessNameTests;
-			productReference = 3E659F2A1B4669770046DD15 /* findProcessNameTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3E659F091B4669770046DD15 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Valo;
 				TargetAttributes = {
 					3E659F101B4669770046DD15 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					3E659F291B4669770046DD15 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 3E659F101B4669770046DD15;
 					};
 				};
 			};
@@ -189,7 +202,6 @@
 			projectRoot = "";
 			targets = (
 				3E659F101B4669770046DD15 /* findProcessName */,
-				3E659F291B4669770046DD15 /* findProcessNameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +217,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E659F281B4669770046DD15 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,29 +224,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E659F431B466E5D0046DD15 /* UIView+Border.m in Sources */,
+				3E9492121C76FE9800895C39 /* DeviceUtil.m in Sources */,
 				3E659F1D1B4669770046DD15 /* ViewController.m in Sources */,
+				3E94920D1C76FE0B00895C39 /* ELLIOKitDumper.m in Sources */,
+				3E94920F1C76FE0B00895C39 /* VOIOKitUtils.m in Sources */,
 				3E659F1A1B4669770046DD15 /* AppDelegate.m in Sources */,
+				3E94920E1C76FE0B00895C39 /* ELLIOKitNodeInfo.m in Sources */,
+				3E659F3F1B4669E30046DD15 /* VOProcess.m in Sources */,
 				3E659F171B4669770046DD15 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E659F261B4669770046DD15 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E659F311B4669770046DD15 /* findProcessNameTests.m in Sources */,
+				3E659F401B4669E30046DD15 /* VOProcessHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3E659F2C1B4669770046DD15 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3E659F101B4669770046DD15 /* findProcessName */;
-			targetProxy = 3E659F2B1B4669770046DD15 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3E659F1E1B4669770046DD15 /* Main.storyboard */ = {
@@ -284,6 +280,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -299,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,9 +346,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/findProcessName",
+				);
 				INFOPLIST_FILE = findProcessName/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valo.findProcess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,43 +365,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/findProcessName",
+				);
 				INFOPLIST_FILE = findProcessName/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valo.findProcess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		3E659F381B4669770046DD15 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = findProcessNameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findProcessName.app/findProcessName";
-			};
-			name = Debug;
-		};
-		3E659F391B4669770046DD15 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = findProcessNameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findProcessName.app/findProcessName";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,14 +399,7 @@
 				3E659F361B4669770046DD15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		3E659F371B4669770046DD15 /* Build configuration list for PBXNativeTarget "findProcessNameTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E659F381B4669770046DD15 /* Debug */,
-				3E659F391B4669770046DD15 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
