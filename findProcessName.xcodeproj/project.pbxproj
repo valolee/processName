@@ -16,11 +16,13 @@
 		3E659F3F1B4669E30046DD15 /* VOProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E659F3C1B4669E30046DD15 /* VOProcess.m */; };
 		3E659F401B4669E30046DD15 /* VOProcessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E659F3E1B4669E30046DD15 /* VOProcessHelper.m */; };
 		3E659F431B466E5D0046DD15 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E659F421B466E5D0046DD15 /* UIView+Border.m */; };
+		3E6790C91CF426BB00767ACD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6790C81CF426BB00767ACD /* IOKit.framework */; };
+		3E6790E31CF4369800767ACD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6790E21CF4369800767ACD /* CoreTelephony.framework */; };
+		3E6790E51CF436A800767ACD /* libMobileGestalt.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6790E41CF436A800767ACD /* libMobileGestalt.tbd */; };
 		3E94920D1C76FE0B00895C39 /* ELLIOKitDumper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9492081C76FE0B00895C39 /* ELLIOKitDumper.m */; };
 		3E94920E1C76FE0B00895C39 /* ELLIOKitNodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E94920A1C76FE0B00895C39 /* ELLIOKitNodeInfo.m */; };
 		3E94920F1C76FE0B00895C39 /* VOIOKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E94920C1C76FE0B00895C39 /* VOIOKitUtils.m */; };
 		3E9492121C76FE9800895C39 /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9492111C76FE9800895C39 /* DeviceUtil.m */; };
-		3E9492141C76FF4000895C39 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9492131C76FF4000895C39 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,9 @@
 		3E659F3E1B4669E30046DD15 /* VOProcessHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOProcessHelper.m; sourceTree = "<group>"; };
 		3E659F411B466E5D0046DD15 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
 		3E659F421B466E5D0046DD15 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		3E6790C81CF426BB00767ACD /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		3E6790E21CF4369800767ACD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3E6790E41CF436A800767ACD /* libMobileGestalt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileGestalt.tbd; path = usr/lib/libMobileGestalt.tbd; sourceTree = SDKROOT; };
 		3E9492071C76FE0B00895C39 /* ELLIOKitDumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELLIOKitDumper.h; sourceTree = "<group>"; };
 		3E9492081C76FE0B00895C39 /* ELLIOKitDumper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELLIOKitDumper.m; sourceTree = "<group>"; };
 		3E9492091C76FE0B00895C39 /* ELLIOKitNodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELLIOKitNodeInfo.h; sourceTree = "<group>"; };
@@ -50,7 +55,6 @@
 		3E94920C1C76FE0B00895C39 /* VOIOKitUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOIOKitUtils.m; sourceTree = "<group>"; };
 		3E9492101C76FE9800895C39 /* DeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtil.h; sourceTree = "<group>"; };
 		3E9492111C76FE9800895C39 /* DeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtil.m; sourceTree = "<group>"; };
-		3E9492131C76FF4000895C39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E9492141C76FF4000895C39 /* IOKit.framework in Frameworks */,
+				3E6790E51CF436A800767ACD /* libMobileGestalt.tbd in Frameworks */,
+				3E6790E31CF4369800767ACD /* CoreTelephony.framework in Frameworks */,
+				3E6790C91CF426BB00767ACD /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +108,9 @@
 		3E659F141B4669770046DD15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3E9492131C76FF4000895C39 /* IOKit.framework */,
+				3E6790E41CF436A800767ACD /* libMobileGestalt.tbd */,
+				3E6790E21CF4369800767ACD /* CoreTelephony.framework */,
+				3E6790C81CF426BB00767ACD /* IOKit.framework */,
 				3E659F151B4669770046DD15 /* Info.plist */,
 				3E659F161B4669770046DD15 /* main.m */,
 			);

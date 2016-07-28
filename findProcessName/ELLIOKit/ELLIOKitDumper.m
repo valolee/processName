@@ -8,9 +8,11 @@
 // This code is based on Apple's IOKitTools http://opensource.apple.com/source/IOKitTools/IOKitTools-89.1.1/ioreg.tproj/ioreg.c
 
 #import "ELLIOKitDumper.h"
-#import <mach/mach_host.h>
 #import "ELLIOKitNodeInfo.h"
+#import <mach/mach_host.h>
+#include <dlfcn.h>
 
+#define USE_DLOPEN 0
 #define kIOServicePlane    "IOService"
 
 typedef mach_port_t io_object_t;
@@ -19,6 +21,7 @@ typedef io_object_t io_iterator_t;
 typedef char io_name_t[128];
 typedef UInt32 IOOptionBits;
 
+#if USE_DLOPEN == 0
 io_object_t IOIteratorNext(io_iterator_t iterator);
 
 kern_return_t IOObjectRelease(io_object_t object);
@@ -46,6 +49,8 @@ kern_return_t IORegistryEntryGetChildIterator(io_registry_entry_t entry,
         const io_name_t plane,
         io_iterator_t *iterator);
 
+#endif
+
 const UInt32 kIORegFlagShowProperties = (1 << 1);
 
 struct options {
@@ -58,7 +63,69 @@ struct options {
 #define assertion(condition,msg,errtype) \
     if([self assertion:(condition) message:msg type:errtype]){return nil;}
 
+@interface ELLIOKitDumper (){
+#if USE_DLOPEN == 1
+    void *libHandle;
+    io_object_t (*IOIteratorNext)(io_iterator_t iterator);
+    kern_return_t (*IOObjectRelease)(io_object_t object);
+    
+    kern_return_t (*IORegistryEntryGetNameInPlane)(io_registry_entry_t entry,
+                                                const io_name_t plane,
+                                                io_name_t name);
+    
+    kern_return_t (*IOMasterPort)(mach_port_t bootstrapPort,
+                               mach_port_t *masterPort);
+    
+    io_registry_entry_t (*IORegistryGetRootEntry)(mach_port_t masterPort);
+    
+    kern_return_t (*IORegistryEntryCreateCFProperties)(io_registry_entry_t entry,
+                                                    CFMutableDictionaryRef *properties,
+                                                    CFAllocatorRef allocator,
+                                                    IOOptionBits options);
+    
+    
+    boolean_t (*IOObjectConformsTo)(io_object_t object,
+                                 const io_name_t className);
+    
+    
+    kern_return_t (*IORegistryEntryGetChildIterator)(io_registry_entry_t entry,
+                                                  const io_name_t plane,
+                                                  io_iterator_t *iterator);
+#endif
+}
+
+@end
+
 @implementation ELLIOKitDumper
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+#if USE_DLOPEN == 1
+        libHandle = dlopen("/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit", RTLD_LAZY);
+        char *error;
+        if (libHandle == NULL && (error = dlerror()) != NULL)  {
+            NSLog(@"dlopen error = %s",error);
+            sleep(3);
+            exit(1);
+        }
+        IOIteratorNext                    = dlsym(libHandle, "IOIteratorNext");
+        IOObjectRelease                   = dlsym(libHandle, "IOObjectRelease");
+        IORegistryEntryGetNameInPlane     = dlsym(libHandle, "IORegistryEntryGetNameInPlane");
+        IOMasterPort                      = dlsym(libHandle, "IOMasterPort");
+        IORegistryGetRootEntry            = dlsym(libHandle, "IORegistryGetRootEntry");
+        IORegistryEntryCreateCFProperties = dlsym(libHandle, "IORegistryEntryCreateCFProperties");
+        IOObjectConformsTo                = dlsym(libHandle, "IOObjectConformsTo");
+        IORegistryEntryGetChildIterator   = dlsym(libHandle, "IORegistryEntryGetChildIterator");
+#endif
+    }
+    return self;
+}
+- (void)dealloc{
+#if USE_DLOPEN == 1
+    dlclose(libHandle);
+#endif
+}
 
 - (BOOL)assertion:(int)condition message:(char *)message type:(char *)type {
     if (condition == 0) {
